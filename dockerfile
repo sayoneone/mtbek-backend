@@ -15,4 +15,6 @@ RUN cd /app && \
 
 RUN chown -R www-data: /app
 
+RUN php artisan migrate
+
 CMD sh /app/docker/startup.sh
