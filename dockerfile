@@ -14,7 +14,7 @@ RUN cd /app && \
     /usr/local/bin/composer install --no-dev
 
 RUN chown -R www-data: /app
-
-RUN php artisan migrate
+# хуй его знает как это говно прогнать
+RUN  /app php artisan migrate
 
 CMD sh /app/docker/startup.sh
